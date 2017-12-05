@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Markers - SVG</title>
+  <link rel="stylesheet" media="all" href="style.css">
+</head>
+<body>
+  <svg viewBox="0 0 4000 2000" version="1.1">
+    <defs>
+      <marker id="StartMarker" viewBox="0 0 12 12" refX="12" refY="6" markerWidth="3" markerHeight="3" stroke="green" stroke-width="2" fill="none" orient="auto">
+        <circle cx="6" cy="6" r="5"/>
+      </marker>
+      <marker id="MidMarker" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="strokeWidth" markerWidth="3" markerHeight="3" stroke="lightblue" stroke-width="2" fill="none" orient="auto">
+        <path d="M 0 0 L 10 10 M 0 10 L 10 0"/>
+      </marker>
+      <marker id="EndMarker" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="strokeWidth" markerWidth="3" markerHeight="3" stroke="red" stroke-width="2" fill="none">
+        <rect x="0" y="0" width="10" height="10"/>
+      </marker>
+    </defs>
+    <path d="M 200 250 L 700 100 L 900 350 L 1200 400 L 1300 200 L 1700 680 L 2200 680 L 2600 400" fill="none" stroke="black" stroke-width="50" marker-start="url(#StartMarker)" marker-mid="url(#MidMarker)" marker-end="url(#EndMarker)"/>
+    <path d="M 1000 750 S 2000 750 2500 1250 S 1200 1000 1300 1400 S 1700 1480 1900 1200" fill="none" stroke="tomato" stroke-width="50" marker-start="url(#StartMarker)" marker-mid="url(#MidMarker)" marker-end="url(#EndMarker)"/>
+  </svg>
+  <div id="ttip" class="tooltip" />
+  <script src="script.js"></script>
+</body>
+</html>
