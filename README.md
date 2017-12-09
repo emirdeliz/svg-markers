@@ -1,2 +1,2 @@
-# Svg Charts
+# Svg Markers
 Demo of simple markers with svg
